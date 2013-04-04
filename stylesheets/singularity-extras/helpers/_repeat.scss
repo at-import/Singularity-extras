@@ -1,0 +1,8 @@
+// Repeat a list
+@function repeat($count, $repeat) {
+  $list: $repeat;
+  @for $i from 2 through $count {
+    $list: join($repeat, $list);
+  }
+  @return $list;
+}
