@@ -38,3 +38,14 @@ Grid generators are functions used to create grids. You should use these when ad
 	* Grid based on a spiral of the given ratio
 	* Required parameters: `$depth` (number of turns, defaults to `5`), `$ratio` (defaults to `golden()`), `$invert` (inverts grid, defaults to `false`)
 	* `ratio-spiral()`
+
+### Layouts and Layout Helpers
+
+Layouts and Layout Helpers are exactly what they sound like, either layouts built with the use of Singularity or helpers to help you build your own layouts.
+
+* **Layout Mixin**
+	* Mixin to help you override your global [Grid Contexts](https://github.com/Team-Sass/Singularity/wiki/Creating-Grids) and [Output Style Context](https://github.com/Team-Sass/Singularity/wiki/Output-Styles) as a block. This will automatically apply the relevant [context overrides](https://github.com/Team-Sass/Singularity/wiki/Spanning-The-Grid#context-overrides) to all `grid-span` mixins in the block.
+	* Can nest `layout` mixins
+	* Overridden global contexts ***will not be available*** while within a `layout` mixin.
+	* Takes three optional parameters, `$grid`, `$gutter`, and `$output-style`.
+	* Usage is simple; `@include layout($grid, $gutter, $output-style) { }`
