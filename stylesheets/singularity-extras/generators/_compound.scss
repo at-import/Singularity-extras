@@ -32,7 +32,7 @@
     // add the counter value to the compound grid list, reset counter
     // this marks where one column ends and a new one begins
     @if $add-col {
-      $compound-grid: join($compound-grid, $compound-counter, comma);
+      $compound-grid: join($compound-grid, $compound-counter);
       $compound-counter: 1;
     }
     // if no column is added, bump up counter

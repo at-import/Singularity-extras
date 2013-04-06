@@ -6,7 +6,7 @@
 
   @for $i from 0 through $steps - 1 {
     $xr: $x * pow($ratio, $i);
-    $return: append($return, $xr, comma);
+    $return: append($return, $xr);
   }
 
   @if $start == 'small' and $ratio < 1 {
