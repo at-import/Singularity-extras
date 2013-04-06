@@ -1,0 +1,46 @@
+/* line 12, ../sass/test.scss */
+#layouts {
+  content: 'Initial Layout';
+  width: 25%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 37.5%;
+  clear: none;
+  content: 'Inner Layout';
+  width: 13.7931%;
+  clear: right;
+  float: left;
+  margin-right: 3.44828%;
+  content: 'Back to Initial Layout';
+  width: 25%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 37.5%;
+  clear: none;
+}
+@media (min-width: 500px) {
+  /* line 12, ../sass/test.scss */
+  #layouts {
+    content: 'Inner Layout, Breakpoint';
+    width: 13.7931%;
+    clear: right;
+    float: left;
+    margin-right: 3.44828%;
+    content: 'Nested Layout';
+    width: 32%;
+    clear: right;
+    float: left;
+    margin-right: 2%;
+  }
+}
+@media (min-width: 500px) {
+  /* line 12, ../sass/test.scss */
+  #layouts {
+    content: 'Initial Breakpoint Layout';
+    width: 28.57143%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 21.42857%;
+    clear: none;
+  }
+}
