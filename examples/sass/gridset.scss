@@ -1,0 +1,36 @@
+@import "singularitygs";
+@import "singularity-extras";
+
+@import "gridset/gridset";
+
+@mixin gridset {
+  @each $grid in $gs-prefixes {
+
+    // Reformat to a space seperated list
+    $reformatted-grid: ();
+    @each $column in gs-grid($grid) {
+      $reformatted-grid: append($reformatted-grid, $column);
+    }
+
+    // Add grids
+    @if $grids == () {
+      $grids: $reformatted-grid;
+    }
+    @else {
+      $grids: add-grid($reformatted-grid at 20em);
+    }
+
+
+    // Add gutters
+    @if $gutters == () {
+      $gutters: gs-gutter($grid);
+    }
+    @else {
+      $gutters: add-gutter(gs-gutter($grid) at 20em);
+    }
+  }
+}
+
+@debug gs-width(d, 1, 3);
+
+@include gridset;

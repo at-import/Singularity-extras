@@ -24,7 +24,7 @@ $gutters: .5;
       @include grid-span(1, 2);
 
       @include layout(2 4 6) {
-        @debug find-grid();
+        // @debug find-grid();
         content: 'Nested Layout';
         @include grid-span(1, 2);
       }
@@ -41,14 +41,14 @@ $gutters: .5;
   @include grid-span(1, 2);
 
   @include breakpoint(700px) {
-    @debug find-grid();
+    // @debug find-grid();
   }
 
   @include breakpoint(900px) {
-    @debug find-grid();
+    // @debug find-grid();
   }
 
   @include breakpoint(1100px) {
-    @debug find-grid();
+    // @debug find-grid();
   }
 }
