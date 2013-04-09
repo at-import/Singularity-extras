@@ -1,0 +1,30 @@
+// UNFINISHED
+// Need to pull in breakpoints.
+
+@mixin gridset {
+  @each $grid in $gs-prefixes {
+
+    // Reformat to a space seperated list
+    $reformatted-grid: ();
+    @each $column in gs-grid($grid) {
+      $reformatted-grid: append($reformatted-grid, $column);
+    }
+
+    // Add grids
+    @if $grids == () {
+      $grids: $reformatted-grid;
+    }
+    @else {
+      $grids: add-grid($reformatted-grid at 20em);
+    }
+
+
+    // Add gutters
+    @if $gutters == () {
+      $gutters: gs-gutter($grid);
+    }
+    @else {
+      $gutters: add-gutter(gs-gutter($grid) at 20em);
+    }
+  }
+}
