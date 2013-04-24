@@ -6,6 +6,6 @@ require 'sassy-math'
 Compass::Frameworks.register("singularity-extras", :path => "#{File.dirname(__FILE__)}/..")
 
 module SingularityExtras
-  VERSION = "0.0.2"
-  DATE = "2012-04-04"
+  VERSION = "0.0.3"
+  DATE = "2012-04-24"
 end
