@@ -38,6 +38,11 @@ Grid generators are functions used to create grids. You should use these when ad
 	* Grid based on a spiral of the given ratio
 	* Required parameters: `$depth` (number of turns, defaults to `5`), `$ratio` (defaults to `golden()`), `$invert` (inverts grid, defaults to `false`)
 	* `ratio-spiral()`
+* **Snap Grid**
+	* "Snaps" an Asymmetric grid to a Symmetric grid by calculating how many gutters would be applied if it had been a symmetric grid
+	* Works best with integer based asymmetric grids
+	* Required parameters: `$grid`, `$gutter`
+	* `snap(2 8 2, 1/3)`
 
 ### Layouts and Layout Helpers
 
