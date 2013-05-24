@@ -1,6 +1,6 @@
 {
   "name": "singularity-extras",
-  "version": "\"1.7.2\"",
+  "version": "1.7.2",
   "main": "stylesheets/_singularity-extras.scss",
   "ignore": [
     "**/.*",
@@ -8,7 +8,7 @@
     "components"
   ],
   "dependencies": {
-    "singularity": ">=0.0.1", // match to name
+    "singularity": ">=0.0.1",
     "sassy-math": ">=1.5",
     "modular-scale": ">=1.0.6"
   }
