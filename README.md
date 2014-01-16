@@ -24,7 +24,7 @@ Singularity Extras currently offers the following features for use with Singular
 
 ### Grid Generators
 
-Grid generators are functions used to create grids. You should use these when adding a grid using Singularity in place of where you were normally simply write out a grid.
+Grid generators are functions used to create grids. You should use these when adding a grid using Singularity in place of where you would normally simply write out a grid.
 
 * **Compound Grids**
 	* Compound Grids combine multiple symmetric grids together to create a new asymmetric grid
