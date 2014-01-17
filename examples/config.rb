@@ -1,7 +1,8 @@
 # Require any additional compass plugins here.
 require 'modular-scale'
-require 'singularitygs'
+require 'breakpoint'
 add_import_path '../stylesheets'
+add_import_path '../../Singularity/stylesheets'
 
 # Set this to the root of your project when deployed:
 http_path = "/"

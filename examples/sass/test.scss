@@ -1,54 +1,73 @@
+@import "breakpoint";
 @import "singularitygs";
-@import "singularity-extras";
+@import "singularity-extras/generators/ratio";
+@import "singularity-extras/generators/snap";
+@import "singularity-extras/outputs";
 
-$grids: 3;
-$grids: add-grid(1 2 3 at 500px);
-$grids: add-grid(ratio(golden(), 3) at 700px);
-$grids: add-grid(ratio-spiral() at 900px);
-$grids: add-grid(compound(2, 3, 4) at 1100px);
+@include add-grid(320px 1 2 200px 1);
+@include add-gutter(1em);
+@include add-gutter-style('split');
 
-$gutters: .5;
+@include sgs-change('calc include min-width', false);
 
-#layouts {
-  content: 'Initial Layout';
-  @include grid-span(1, 2);
+// @debug ratio(2, 5);
+// @debug snap(ratio(2, 5), .25);
 
-  @include layout(6, .25, 'float') {
-      content: 'Inner Layout';
-      @include grid-span(1, 2);
-    }
+* {
+  box-sizing: border-box;
+}
 
-  @include breakpoint(500px) {
-    @include layout(6, .25, 'float') {
-      content: 'Inner Layout, Breakpoint';
-      @include grid-span(1, 2);
+body {
+  margin: 0;
+  padding: 0;
+}
 
-      @include layout(2 4 6) {
-        @debug find-grid();
-        content: 'Nested Layout';
-        @include grid-span(1, 2);
-      }
-    }
-  }
+div {
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+}
 
-  @include breakpoint(500px) {
-    content: 'Initial Breakpoint Layout';
-    @include grid-span(1, 2);
-  }
+.foo {
+  background: red;
+  @include grid-span(1, 1, $output-style: 'calc');
+}
+
+.bar {
+  background: orange;
+  @include grid-span(1, 2, $output-style: 'calc');
+}
+
+.qux {
+  background: green;
+  @include grid-span(1, 4, $output-style: 'calc');
+}
+
+.where {
+  background: blue;
+  @include grid-span(1, 3, $output-style: 'calc');
+}
+
+.final {
+  background: grey;
+  @include grid-span(1, 5, $output-style: 'calc');
+}
+
+.baz {
+  background: yellow;
+  clear: both;
+  @include grid-span(2, 2, $output-style: 'calc');
+}
 
 
-  content: 'Back to Initial Layout';
-  @include grid-span(1, 2);
+.waldo {
+  background: purple;
+  clear: both;
+  @include grid-span(3, 3, $output-style: 'calc');
+}
 
-  @include breakpoint(700px) {
-    @debug find-grid();
-  }
-
-  @include breakpoint(900px) {
-    @debug find-grid();
-  }
-
-  @include breakpoint(1100px) {
-    @debug find-grid();
-  }
+.double {
+  background: pink;
+  clear: both;
+  @include grid-span(4, 1, $output-style: 'calc');
 }
