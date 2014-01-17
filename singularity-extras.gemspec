@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
   s.files += Dir.glob("stylesheets/**/*.*")
 
   # Dependent Gems
-  s.add_dependency 'singularitygs',       ">= 0.0.1"
-  s.add_dependency 'sassy-math',          ">= 1.5"
-  s.add_dependency 'modular-scale',       ">= 1.0.6"
+  s.add_dependency 'singularitygs',       "~> 1.2.0.rc.1"
+  s.add_dependency 'modular-scale',       "~> 2.0.0.alpha5"
 end
