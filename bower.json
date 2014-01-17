@@ -1,6 +1,6 @@
 {
   "name": "singularity-extras",
-  "version": "1.7.2",
+  "version": "1.0.0.alpha.1",
   "main": "stylesheets/_singularity-extras.scss",
   "ignore": [
     "**/.*",
