@@ -1,4 +1,4 @@
-source :rubygems
+source "http://rubygems.org"
 
-gem 'singularitygs',      ">= 0.0.1" 
-gem 'compass',            ">= 0.12.2" 
+gem 'singularitygs',      "~> 1.2.0.rc.1"
+gem 'modular-scale',      "~> 2.0.0.alpha5"
