@@ -1,6 +1,10 @@
 // "Snaps" an asymmetric grid to a symmetric one by including gutters in the grid definitions
 // Will only work properly with integer asymmetric grids
 @function snap($grid, $gutter) {
+  @if not unitless($gutter) {
+    @return $grid;
+  }
+
   $holder: ();
 
   @each $column in $grid {
