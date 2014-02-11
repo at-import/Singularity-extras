@@ -1,102 +1,46 @@
-/* line 16, ../sass/test.scss */
+/* line 14, ../sass/test.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 20, ../sass/test.scss */
+/* line 18, ../sass/test.scss */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* line 25, ../sass/test.scss */
+/* line 23, ../sass/test.scss */
 div {
-  height: 10vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-/* line 31, ../sass/test.scss */
-.foo {
+/* line 29, ../sass/test.scss */
+.main {
   background: red;
-  width: 320px;
+  width: -webkit-calc((((100% - (700px + 2em)) / (1))) * 1);
+  width: calc((((100% - (700px + 2em)) / (1))) * 1);
   float: left;
   margin-right: -100%;
-  margin-left: 0.5em;
+  margin-left: -webkit-calc((400px + 1em));
+  margin-left: calc((400px + 1em));
 }
 
-/* line 36, ../sass/test.scss */
-.bar {
-  background: orange;
-  width: -webkit-calc((((100% - (520px + 5em)) / (4))) * 1);
-  width: calc((((100% - (520px + 5em)) / (4))) * 1);
-  float: left;
-  margin-right: -100%;
-  margin-left: -webkit-calc(0.5em + (320px + 1em));
-  margin-left: calc(0.5em + (320px + 1em));
-}
-
-/* line 41, ../sass/test.scss */
-.qux {
+/* line 34, ../sass/test.scss */
+.primary-sidebar {
   background: green;
-  width: 200px;
+  width: 400px;
   float: left;
   margin-right: -100%;
-  margin-left: -webkit-calc(0.5em + (320px + 1em) + (((100% - (520px + 5em)) / (4)) * 1 + 1em) + (((100% - (520px + 5em)) / (4)) * 2 + 1em));
-  margin-left: calc(0.5em + (320px + 1em) + (((100% - (520px + 5em)) / (4)) * 1 + 1em) + (((100% - (520px + 5em)) / (4)) * 2 + 1em));
+  margin-left: 0;
 }
 
-/* line 46, ../sass/test.scss */
-.where {
+/* line 39, ../sass/test.scss */
+.secondary-sidebar {
   background: blue;
-  width: -webkit-calc((((100% - (520px + 5em)) / (4))) * 2);
-  width: calc((((100% - (520px + 5em)) / (4))) * 2);
-  float: left;
-  margin-right: -100%;
-  margin-left: -webkit-calc(0.5em + (320px + 1em) + (((100% - (520px + 5em)) / (4)) * 1 + 1em));
-  margin-left: calc(0.5em + (320px + 1em) + (((100% - (520px + 5em)) / (4)) * 1 + 1em));
-}
-
-/* line 51, ../sass/test.scss */
-.final {
-  background: grey;
-  width: -webkit-calc((((100% - (520px + 5em)) / (4))) * 1);
-  width: calc((((100% - (520px + 5em)) / (4))) * 1);
+  width: 300px;
   float: right;
   margin-left: 0;
-  margin-right: 0.5em;
-}
-
-/* line 56, ../sass/test.scss */
-.baz {
-  background: yellow;
-  clear: both;
-  width: -webkit-calc((((100% - (520px + 5em)) / (4)) * 1 + 1em) + (((100% - (520px + 5em)) / (4)) * 2));
-  width: calc((((100% - (520px + 5em)) / (4)) * 1 + 1em) + (((100% - (520px + 5em)) / (4)) * 2));
-  float: left;
-  margin-right: -100%;
-  margin-left: -webkit-calc(0.5em + (320px + 1em));
-  margin-left: calc(0.5em + (320px + 1em));
-}
-
-/* line 63, ../sass/test.scss */
-.waldo {
-  background: purple;
-  clear: both;
-  width: -webkit-calc((((100% - (520px + 5em)) / (4)) * 2 + 1em) + (200px + 1em) + (((100% - (520px + 5em)) / (4)) * 1));
-  width: calc((((100% - (520px + 5em)) / (4)) * 2 + 1em) + (200px + 1em) + (((100% - (520px + 5em)) / (4)) * 1));
-  float: right;
-  margin-left: 0;
-  margin-right: 0.5em;
-}
-
-/* line 69, ../sass/test.scss */
-.double {
-  background: pink;
-  clear: both;
-  width: -webkit-calc((320px + 1em) + (((100% - (520px + 5em)) / (4)) * 1 + 1em) + (((100% - (520px + 5em)) / (4)) * 2 + 1em) + (200px));
-  width: calc((320px + 1em) + (((100% - (520px + 5em)) / (4)) * 1 + 1em) + (((100% - (520px + 5em)) / (4)) * 2 + 1em) + (200px));
-  float: left;
-  margin-right: -100%;
-  margin-left: 0.5em;
+  margin-right: 0;
 }

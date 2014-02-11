@@ -4,11 +4,9 @@
 @import "singularity-extras/generators/snap";
 @import "singularity-extras/outputs";
 
-@include add-grid(320px 1 2 200px 1);
+@include add-grid(400px 1 300px);
 @include add-gutter(1em);
-@include add-gutter-style('split');
-
-@include sgs-change('calc include min-width', false);
+@include sgs-change('output', 'calc');
 
 // @debug ratio(2, 5);
 // @debug snap(ratio(2, 5), .25);
@@ -23,51 +21,22 @@ body {
 }
 
 div {
-  height: 10vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-.foo {
+.main {
   background: red;
-  @include grid-span(1, 1, $output-style: 'calc');
+  @include grid-span(1, 2);
 }
 
-.bar {
-  background: orange;
-  @include grid-span(1, 2, $output-style: 'calc');
-}
-
-.qux {
+.primary-sidebar {
   background: green;
-  @include grid-span(1, 4, $output-style: 'calc');
+  @include grid-span(1, 1);
 }
 
-.where {
+.secondary-sidebar {
   background: blue;
-  @include grid-span(1, 3, $output-style: 'calc');
-}
-
-.final {
-  background: grey;
-  @include grid-span(1, 5, $output-style: 'calc');
-}
-
-.baz {
-  background: yellow;
-  clear: both;
-  @include grid-span(2, 2, $output-style: 'calc');
-}
-
-
-.waldo {
-  background: purple;
-  clear: both;
-  @include grid-span(3, 3, $output-style: 'calc');
-}
-
-.double {
-  background: pink;
-  clear: both;
-  @include grid-span(4, 1, $output-style: 'calc');
+  @include grid-span(1, 3);
 }
