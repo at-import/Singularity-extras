@@ -1,7 +1,6 @@
 require 'compass'
 require 'singularitygs'
 require 'modular-scale'
-require 'sassy-math'
 
 Compass::Frameworks.register("singularity-extras", :path => "#{File.dirname(__FILE__)}/..")
 
