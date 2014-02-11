@@ -39,7 +39,7 @@ $Singularity-Settings: map-merge($Singularity-Settings, ('calc include min-width
   $Fixed: ();
   $Fluid: ();
   $Fixed-Totals: ('px': 0, 'em': 0, '%': 0);
-  $Gutter-Totals: if(str-index($Style, 'split') != null and str-index($Style, 'split') > 0, $Gutter * length($Grid), $Gutter * (length($Grid) - 1));
+  $Gutter-Totals: if(str-index($Style, 'split'), $Gutter * length($Grid), $Gutter * (length($Grid) - 1));
   $Fluid-Totals: 0;
   $Fluid-Fixed-Sum: '';
   $Single-Fluid: '';
